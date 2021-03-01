@@ -10,7 +10,8 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @total += quantity*price
+    @last_item = quantity * price
+    @total += last_item
     @items.push(title)
   end
 
@@ -25,7 +26,11 @@ class CashRegister
   end
 
   def items
-    @items    
+    @items
+  end
+
+  def void_last_transaction
+
   end
 
 
