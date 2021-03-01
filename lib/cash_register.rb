@@ -14,6 +14,11 @@ class CashRegister
     @items.push(title)
   end
 
+  def apply_discount
+    @total *= (1 - @discount)
+    "After the discount, the total comes to $#{total}."    
+  end
+
 
 
 
